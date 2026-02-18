@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  idea-to-prototype:
+    container_name: idea-to-prototype-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3090:3000"
+    environment:
+      - NODE_ENV=production
